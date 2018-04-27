@@ -112,7 +112,8 @@
 			'data' => array(),
 			'fill' => false,
 			'backgroundColor' => '#000000',
-			'borderColor' => '#000000'
+			'borderColor' => '#000000',
+			'lineTension' => 0
 		);
 
 		foreach($r as $day => $v){

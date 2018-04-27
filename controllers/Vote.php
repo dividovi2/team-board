@@ -30,7 +30,7 @@ class Vote extends MY_Controller {
 
 		$this->load->library('form_validation');
 
-		$this->form_validation->set_rules('vote', 'Where to eat', 'trim');
+		$this->form_validation->set_rules('vote', 'Where to eat', 'trim|strip_tags');
 		if ($this->form_validation->run() != FALSE){
 			$vote = $this->input->post('vote', NULL);
 			$this->votes->insert($vote);

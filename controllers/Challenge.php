@@ -42,9 +42,9 @@ class Challenge extends MY_Controller {
 
 		$this->load->library('form_validation');
 
-		$this->form_validation->set_rules('user', 'User', 'required|is_natural|trim');
-		$this->form_validation->set_rules('date', 'Rate', 'required|trim');
-		$this->form_validation->set_rules('result', 'Result', 'required|is_natural|trim');
+		$this->form_validation->set_rules('user', 'User', 'required|is_natural|trim|strip_tags');
+		$this->form_validation->set_rules('date', 'Rate', 'required|trim|strip_tags');
+		$this->form_validation->set_rules('result', 'Result', 'required|is_natural|trim|strip_tags');
 		if ($this->form_validation->run() != FALSE){
 			$user = $this->input->post('user', NULL);
 			$date = $this->input->post('date', NULL);
